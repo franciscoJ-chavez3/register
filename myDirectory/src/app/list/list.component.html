@@ -1,0 +1,5 @@
+<div class="list-group">
+  <a *ngFor="let student of students" (click)="studentClicked(student)" href="#"
+    class="list-group-item list-group-item-action">{{student.first}}
+    {{student.last}}</a>
+</div>
