@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor = "let item of productList">
+            <div class="card my-5" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.pName}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{item.additionalInfo}}</h6>
+                  <app-modal [product] = 'item' ></app-modal>
+                  <p class="card-text">{{item.id}}</p>
+                  <a routerLink = "/{{item.pName}}/{{item.id}}" class="card-link">{{item.price}}</a>
+                  <a href="#" class="card-link">{{item.pDesc}}</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
