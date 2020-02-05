@@ -21,4 +21,23 @@ export class DataaService {
     //return
     return result;
   }
+
+  checkIfUserExists(username: string): boolean {
+    //set result and return if user exists
+    let result = false;
+    console.log(this.userList.find(x => username.toLowerCase() === x.uName) === undefined); {
+      result = true;
+    }
+    return result;
+  }
+
+  addUser(username: string, password: string) {
+    //push user
+    let newUser: Iuser = {
+      uName: username.toLowerCase(), 
+      pWord: password
+    }
+
+    this.userList.push(newUser);
+  }
 }
